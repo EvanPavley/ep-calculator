@@ -1,0 +1,122 @@
+.Calculator {
+  border: 5px solid black;
+  height: 800px;
+  width: 600px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.Display{
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 2em;
+  padding-right: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  border: 3px solid black;
+  height: 200px;
+  width: 500px;
+  margin-top: 30px;
+}
+
+.Buttons{
+  display: inline-block;
+  border: 2px dotted black;
+  height: 500px;
+  width: 500px;
+  margin-top: 30px;
+}
+
+.ButtonContainer{
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+  grid-template-areas:
+    "clear clear negpos percent divide"
+    "openparen seven eight nine times"
+    "closeparen four five six minus"
+    "exponent one two three plus"
+    "sqrt decimal zero equals equals";
+}
+
+.btn{
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid black;
+}
+.btn:hover {
+  background-color: #ffe6c9;
+}
+
+
+.clear{
+  grid-area: clear;
+}
+.negpos{
+  grid-area: negpos;
+}
+.percent{
+  grid-area: percent;
+}
+.divide{
+  grid-area: divide;
+}
+.openparen{
+  grid-area: openparen;
+}
+.seven{
+  grid-area: seven;
+}
+.eight{
+  grid-area: eight;
+}
+.nine{
+  grid-area: nine;
+}
+.times{
+  grid-area: times;
+}
+.closeparen{
+  grid-area: closeparen;
+}
+.four{
+  grid-area: four;
+}
+.five{
+  grid-area: five;
+}
+.six{
+  grid-area: six;
+}
+.minus{
+  grid-area: minus;
+}
+.exponent{
+  grid-area: exponent;
+}
+.one{
+  grid-area: one;
+}
+.two{
+  grid-area: two;
+}
+.three{
+  grid-area: three;
+}
+.plus{
+  grid-area: plus;
+}
+.sqrt{
+  grid-area: sqrt;
+}
+.decimal{
+  grid-area: decimal;
+}
+.zero{
+  grid-area: zero;
+}
+.equals{
+  grid-area: equals;
+}
