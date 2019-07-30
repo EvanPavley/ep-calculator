@@ -15,6 +15,16 @@ class Calculator extends Component {
     })
   }
 
+  handelEquals = (event) => {
+    let newText = event.target.innerText
+    this.setState((prevState, props) => {
+      return {
+        displayText: prevState.displayText + newText
+      };
+    })
+    console.log(this.state.displayText);
+  }
+
   handelClear = () => {
     this.setState((prevState, props) => {
       return {
@@ -138,7 +148,10 @@ class Calculator extends Component {
               onClick={this.handelBtnClick}
               className="btn zero">{ZERO}
             </div>
-            <div className="btn equals">{EQUALS}</div>
+            <div
+              onClick={this.handelEquals}
+              className="btn equals">{EQUALS}
+            </div>
           </div>
         </div>
       </div>
