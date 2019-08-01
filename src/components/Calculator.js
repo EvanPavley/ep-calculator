@@ -3,7 +3,8 @@ import './Calculator.css';
 
 class Calculator extends Component {
   state= {
-    displayText: "",
+    displayTextTop: "",
+    displayTextBtm: "0",
   }
 
   handelBtnClick = (event) => {
@@ -60,7 +61,10 @@ class Calculator extends Component {
 
     return (
       <div className="Calculator">
-        <div className="Display">{this.state.displayText}</div>
+        <div className="Display">
+          <div className="TopDisplay">{this.state.displayTextTop}</div>
+          <div className="BtmDisplay">{this.state.displayTextBtm}</div>
+        </div>
         <div className="Buttons">
           <div className="ButtonContainer">
             <div
