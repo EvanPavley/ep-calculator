@@ -9,27 +9,45 @@ class Calculator extends Component {
 
   handelBtnClick = (event) => {
     let newText = event.target.innerText
-    this.setState((prevState, props) => {
-      return {
-        displayText: prevState.displayText + newText
-      };
-    })
+    if (this.state.displayTextBtm === "0") {
+      this.setState((prevState, props) => {
+        return {
+          displayTextBtm: newText
+        };
+      })
+    }else {
+      this.setState((prevState, props) => {
+        return {
+          displayTextBtm: prevState.displayTextBtm + newText
+        };
+      })
+    }
   }
 
   handelEquals = (event) => {
     let newText = event.target.innerText
-    this.setState((prevState, props) => {
-      return {
-        displayText: prevState.displayText + newText
-      };
-    })
-    console.log(this.state.displayText);
+    let total = eval(this.state.displayTextBtm)
+    if (this.state.displayTextBtm === "0") {
+      this.setState((prevState, props) => {
+        return {
+          displayTextBtm: "0"
+        };
+      })
+    }else {
+      this.setState((prevState, props) => {
+        return {
+          displayTextTop: prevState.displayTextBtm + newText,
+          displayTextBtm: total
+        };
+      })
+    }
+    console.log(this.state.displayTextBtm);
   }
 
   handelClear = () => {
     this.setState((prevState, props) => {
       return {
-        displayText: ""
+        displayTextBtm: "0"
       };
     })
   }
@@ -58,7 +76,7 @@ class Calculator extends Component {
     const DECIMAL = "."
     const ZERO = "0"
     const EQUALS = "="
-
+    console.log(this.state);
     return (
       <div className="Calculator">
         <div className="Display">
