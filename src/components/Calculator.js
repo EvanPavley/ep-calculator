@@ -56,12 +56,12 @@ class Calculator extends Component {
     const CLEAR = "CLEAR";
     const NEGPOS = "+/-";
     const PERCENT = "%";
-    const DIVIDE = "÷";
+    const DIVIDE = "/";
     const OPENPAREN = "(";
     const SEVEN = "7"
     const EIGHT = "8"
     const NINE = "9"
-    const TIMES = "x"
+    const TIMES = "*"
     const CLOSEPAREN = ")"
     const FOUR = "4"
     const FIVE = "5"
