@@ -30,7 +30,7 @@ class Calculator extends Component {
     if (this.state.displayTextBtm === "0") {
       this.setState((prevState, props) => {
         return {
-          displayTextBtm: "0"
+          displayTextBtm: ""
         };
       })
     }else {
@@ -47,6 +47,7 @@ class Calculator extends Component {
   handelClear = () => {
     this.setState((prevState, props) => {
       return {
+        displayTextTop: "",
         displayTextBtm: "0"
       };
     })
